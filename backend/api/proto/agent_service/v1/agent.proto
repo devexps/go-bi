@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package agent_service.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/devexps/go-bi/api/gen/go/agent_service/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.gomicro.api.agent_service.v1";
+
+// The report service definition.
+service ReportService {
+  rpc PostReport (PostReportRequest) returns (PostReportReply) {
+    option (google.api.http) = {
+      post: "/agent/v1/report"
+      body: "*"
+    };
+  }
+}
+
+message PostReportRequest {
+  string reportType = 1;
+  string appId = 2;
+  string appKey = 3;
+  string eventName = 4;
+  int32 debug = 5;
+  string content = 6;
+}
+
+message PostReportReply {
+  int32 code = 1;
+  string msg = 2;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package common.conf;
+
+option go_package = "backend/api/gen/go/common/conf;conf";
+
+message Registry {
+  // Consul
+  message Consul {
+    string scheme = 1;
+    string address = 2;
+    bool health_check = 3;
+  }
+  // Etcd
+  message Etcd {
+    repeated string endpoints = 1;
+  }
+
+  string type = 1;
+  Consul consul = 2;
+  Etcd etcd = 3;
+}

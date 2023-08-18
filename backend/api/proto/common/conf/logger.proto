@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package common.conf;
+
+option go_package = "backend/api/gen/go/common/conf;conf";
+
+message Logger {
+  message Zap {
+    string filename = 1;
+    string level = 2;
+    int32 max_size = 3;
+    int32 max_age = 4;
+    int32 max_backups = 5;
+  }
+
+  message Logrus {
+    string level = 1; // log level
+    string formatter = 2; // output format：text, json.
+    string timestamp_format = 3; // define the timestamp format, e.g. "2006-01-02 15:04:05"
+    bool disable_colors = 4; // no need for colored logs
+    bool disable_timestamp = 5; // no timestamp required
+  }
+
+  string type = 1;
+  Zap zap = 2;
+  Logrus logrus = 3;
+}

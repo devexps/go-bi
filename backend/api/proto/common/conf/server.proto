@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package common.conf;
+
+import "google/protobuf/duration.proto";
+
+option go_package = "backend/api/gen/go/common/conf;conf";
+
+message Server {
+  // HTTP
+  message HTTP {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+    repeated string headers = 4;
+    repeated string methods = 5;
+    repeated string origins = 6;
+  }
+
+  // gPRC
+  message GRPC {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+
+  HTTP http = 1;
+  GRPC grpc = 2;
+}

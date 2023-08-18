@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package common.conf;
+
+option go_package = "backend/api/gen/go/common/conf;conf";
+
+message Auth {
+  string service_key = 1;
+  string api_key = 2;
+}

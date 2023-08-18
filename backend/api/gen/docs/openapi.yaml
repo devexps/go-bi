@@ -1,0 +1,55 @@
+# Generated with protoc-gen-openapi
+# https://github.com/google/gnostic/tree/master/cmd/protoc-gen-openapi
+
+openapi: 3.0.3
+info:
+    title: ReportService API
+    description: The report service definition.
+    version: 0.0.1
+paths:
+    /agent/v1/report:
+        post:
+            tags:
+                - ReportService
+            operationId: ReportService_PostReport
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/agent_service.v1.PostReportRequest'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/agent_service.v1.PostReportReply'
+components:
+    schemas:
+        agent_service.v1.PostReportReply:
+            type: object
+            properties:
+                code:
+                    type: integer
+                    format: int32
+                msg:
+                    type: string
+        agent_service.v1.PostReportRequest:
+            type: object
+            properties:
+                reportType:
+                    type: string
+                appId:
+                    type: string
+                appKey:
+                    type: string
+                eventName:
+                    type: string
+                debug:
+                    type: integer
+                    format: int32
+                content:
+                    type: string
+tags:
+    - name: ReportService

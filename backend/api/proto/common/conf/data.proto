@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package common.conf;
+
+import "google/protobuf/duration.proto";
+
+option go_package = "backend/api/gen/go/common/conf;conf";
+
+message Data {
+  message Database {
+    string driver = 1;
+    string source = 2;
+    bool migrate = 3;
+  }
+
+  message Redis {
+    string addr = 1;
+    string password = 2;
+    int32 db = 3;
+    google.protobuf.Duration dial_timeout = 4;
+    google.protobuf.Duration read_timeout = 5;
+    google.protobuf.Duration write_timeout = 6;
+  }
+
+  message Etcd {
+    repeated string endpoints = 1;
+    google.protobuf.Duration dial_timeout = 2;
+  }
+
+  Database database = 1;
+  Redis redis = 2;
+  Etcd etcd = 3;
+}

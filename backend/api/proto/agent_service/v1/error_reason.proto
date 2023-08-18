@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package agent_service.v1;
+
+import "errors/errors.proto";
+
+option go_package = "github.com/devexps/go-bi/api/gen/go/agent_service/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.gomicro.api.agent_service.v1";
+
+enum ErrorReason {
+  option (errors.default_code) = 500;
+
+  DATA_NOT_FOUND = 0 [(errors.code) = 101];
+}
