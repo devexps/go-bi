@@ -24,6 +24,12 @@ message Server {
     google.protobuf.Duration timeout = 3;
   }
 
+  // Kafka
+  message Kafka {
+    repeated string addrs = 1;
+  }
+
   HTTP http = 1;
   GRPC grpc = 2;
+  Kafka kafka = 3;
 }

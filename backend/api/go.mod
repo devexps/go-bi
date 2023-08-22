@@ -1,9 +1,9 @@
-module backend/api
+module github.com/devexps/go-bi/api
 
 go 1.18
 
 require (
-	github.com/devexps/go-micro/v2 v2.0.0-20230726030419-a409cedfff75
+	github.com/devexps/go-micro/v2 v2.0.0-20230821120014-40cf28ac94da
 	google.golang.org/genproto/googleapis/api v0.0.0-20230530153820-e85fd2cbaebc
 	google.golang.org/grpc v1.55.0
 	google.golang.org/protobuf v1.30.0

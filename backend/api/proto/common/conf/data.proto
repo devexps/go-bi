@@ -27,7 +27,13 @@ message Data {
     google.protobuf.Duration dial_timeout = 2;
   }
 
+  message Kafka {
+    repeated string addrs = 1;
+    string codec = 2;
+  }
+
   Database database = 1;
   Redis redis = 2;
   Etcd etcd = 3;
+  Kafka kafka = 4;
 }

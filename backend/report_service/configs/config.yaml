@@ -1,0 +1,29 @@
+server:
+  grpc:
+    addr: 0.0.0.0:9090
+    timeout: 1s
+
+  kafka:
+    addrs:
+      - "127.0.0.1:9092"
+    codec: "json"
+
+registry:
+  type: "consul"
+  consul:
+    address: 127.0.0.1:8500
+    scheme: http
+    health_check: false
+
+data:
+  database:
+    driver: "clickhouse"
+    source: "clickhouse://localhost:9000/default?dial_timeout=200ms&max_execution_time=60"
+    migrate: false
+
+#auth:
+#  service_key: some-secret-key
+#  api_key: some-secret-key-for-frontend
+
+trace:
+  endpoint: 127.0.0.1:6831

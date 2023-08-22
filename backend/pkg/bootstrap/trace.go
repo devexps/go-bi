@@ -3,6 +3,7 @@ package bootstrap
 import (
 	"errors"
 	"github.com/devexps/go-bi/api/gen/go/common/conf"
+	"go.opentelemetry.io/contrib/propagators/b3"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/sdk/resource"
@@ -54,6 +55,7 @@ func NewTracerProvider(cfg *conf.Tracer, serviceInfo *ServiceInfo) error {
 	}
 
 	otel.SetTracerProvider(tp)
+	otel.SetTextMapPropagator(b3.New(b3.WithInjectEncoding(b3.B3MultipleHeader | b3.B3SingleHeader)))
 
 	return nil
 }

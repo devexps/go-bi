@@ -21,7 +21,8 @@ import (
 
 // initApp init micro application.
 func initApp(logger log.Logger, registrar registry.Registrar, bootstrap *conf.Bootstrap) (*micro.App, func(), error) {
-	dataData, cleanup, err := data.NewData(bootstrap, logger)
+	broker := data.NewKafkaBroker(bootstrap, logger)
+	dataData, cleanup, err := data.NewData(bootstrap, logger, broker)
 	if err != nil {
 		return nil, nil, err
 	}

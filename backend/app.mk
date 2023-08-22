@@ -33,10 +33,25 @@ proto:
 		--openapi_out=fq_schema_naming=true,default_response=false:../gen/docs \
 		$(API_PROTO_FILES)
 
+# generate ent code
+ent:
+ifneq ("$(wildcard ./internal/data/ent)","")
+	@go run -mod=mod entgo.io/ent/cmd/ent generate \
+				--feature privacy \
+				--feature sql/modifier \
+				--feature entql \
+				--feature sql/upsert \
+				./internal/data/ent/schema
+endif
+
+# generate wire code
+wire:
+	@go run -mod=mod github.com/google/wire/cmd/wire ./cmd/server
+
 # generate
 generate:
 	@go mod tidy
-	@go generate ./...
+	@make wire
 
 # init and generate all
 all:

@@ -1,5 +1,5 @@
-github.com/devexps/go-micro/v2 v2.0.0-20230726030419-a409cedfff75 h1:OWtN/WtS0zbUTqotJevPO8EhXkboAZkTZpIdsw88Kpg=
-github.com/devexps/go-micro/v2 v2.0.0-20230726030419-a409cedfff75/go.mod h1:qV2ac9OzaI4dZzKD4lC90bgeLyRI+IgmZDlOmewoF4Q=
+github.com/devexps/go-micro/v2 v2.0.0-20230821120014-40cf28ac94da h1:3Zmp2+QFlf9V6P9TcKHDdVt6ahKot1KUfQhQs9Zvh6A=
+github.com/devexps/go-micro/v2 v2.0.0-20230821120014-40cf28ac94da/go.mod h1:qV2ac9OzaI4dZzKD4lC90bgeLyRI+IgmZDlOmewoF4Q=
 github.com/go-playground/assert/v2 v2.0.1 h1:MsBgLAaY856+nPRTKrp3/OZK38U/wa0CcBYNjji3q3A=
 github.com/go-playground/assert/v2 v2.0.1/go.mod h1:VDjEfimB/XKnb+ZQfWdccd7VUvScMdVu0Titje2rxJ4=
 github.com/go-playground/form/v4 v4.2.0 h1:N1wh+Goz61e6w66vo8vJkQt+uwZSoLz50kZPJWR8eic=

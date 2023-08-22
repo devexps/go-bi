@@ -18,18 +18,23 @@ server:
     addr: 0.0.0.0:9090
     timeout: 1s
 
-#registry:
-#  type: "consul"
-#  consul:
-#    address: 127.0.0.1:8500
-#    scheme: http
-#    health_check: false
+registry:
+  type: "consul"
+  consul:
+    address: 127.0.0.1:8500
+    scheme: http
+    health_check: false
 
-#data:
-#  redis:
-#    addr: 127.0.0.1:6379
-#    read_timeout: 0.2s
-#    write_timeout: 0.2s
+data:
+  redis:
+    addr: 127.0.0.1:6379
+    read_timeout: 0.2s
+    write_timeout: 0.2s
+
+  kafka:
+    codec: json
+    addrs:
+      - "127.0.0.1:9092"
 
 #auth:
 #  service_key: some-secret-key
