@@ -10,8 +10,8 @@ replace (
 require (
 	github.com/devexps/go-bi/api v0.0.0-00010101000000-000000000000
 	github.com/devexps/go-bi/pkg v0.0.0-00010101000000-000000000000
-	github.com/devexps/go-micro/broker/kafka/v2 v2.0.0-20230821120014-40cf28ac94da
-	github.com/devexps/go-micro/v2 v2.0.0-20230821120014-40cf28ac94da
+	github.com/devexps/go-micro/broker/kafka/v2 v2.0.0-20230823141955-592ceec63322
+	github.com/devexps/go-micro/v2 v2.0.0-20230823141955-592ceec63322
 	github.com/google/wire v0.5.0
 )
 
@@ -19,8 +19,8 @@ require (
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
-	github.com/devexps/go-micro/registry/consul/v2 v2.0.0-20230821120014-40cf28ac94da // indirect
-	github.com/devexps/go-micro/registry/etcd/v2 v2.0.0-20230821120014-40cf28ac94da // indirect
+	github.com/devexps/go-micro/registry/consul/v2 v2.0.0-20230823141955-592ceec63322 // indirect
+	github.com/devexps/go-micro/registry/etcd/v2 v2.0.0-20230823141955-592ceec63322 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect

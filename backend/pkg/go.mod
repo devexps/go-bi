@@ -7,9 +7,9 @@ replace github.com/devexps/go-bi/api => ../api/
 require (
 	entgo.io/ent v0.11.10
 	github.com/devexps/go-bi/api v0.0.0-00010101000000-000000000000
-	github.com/devexps/go-micro/registry/consul/v2 v2.0.0-20230821120014-40cf28ac94da
-	github.com/devexps/go-micro/registry/etcd/v2 v2.0.0-20230821120014-40cf28ac94da
-	github.com/devexps/go-micro/v2 v2.0.0-20230821120014-40cf28ac94da
+	github.com/devexps/go-micro/registry/consul/v2 v2.0.0-20230823141955-592ceec63322
+	github.com/devexps/go-micro/registry/etcd/v2 v2.0.0-20230823141955-592ceec63322
+	github.com/devexps/go-micro/v2 v2.0.0-20230823141955-592ceec63322
 	github.com/gorilla/handlers v1.5.1
 	github.com/hashicorp/consul/api v1.20.0
 	go.etcd.io/etcd/client/v3 v3.5.8
