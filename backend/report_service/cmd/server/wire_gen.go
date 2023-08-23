@@ -26,9 +26,9 @@ func initApp(logger log.Logger, registrar registry.Registrar, bootstrap *conf.Bo
 	if err != nil {
 		return nil, nil, err
 	}
-	greeterRepo := data.NewGreeterRepo(dataData, logger)
-	greeterUseCase := biz.NewGreeterUseCase(greeterRepo, logger)
-	reportService := service.NewReportService(greeterUseCase)
+	reportRepo := data.NewReportRepo(dataData, logger)
+	reportUseCase := biz.NewReportUseCase(reportRepo, logger)
+	reportService := service.NewReportService(reportUseCase)
 	grpcServer := server.NewGRPCServer(bootstrap, logger, reportService)
 	realTimeWarehousingRepo := data.NewRealTimeWarehousingRepo(dataData, logger)
 	saverService := service.NewSaverService(logger, realTimeWarehousingRepo)
